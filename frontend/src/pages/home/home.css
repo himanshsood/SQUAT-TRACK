@@ -1,0 +1,21 @@
+body {
+  background-image: url('./image.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.clearButton {
+  background-color: #FF5733;
+  color: white;
+}
+
+.error {
+  color: red;
+  margin: 10px 0;
+}

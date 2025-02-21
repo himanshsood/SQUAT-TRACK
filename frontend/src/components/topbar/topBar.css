@@ -1,0 +1,119 @@
+
+.top {
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  font-family: "Josefin Sans", sans-serif;
+  z-index: 999;
+  padding: 0 10px; /* Add padding for better spacing on smaller screens */
+}
+
+.topLeft,
+.topRight {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topCenter {
+  flex: 6;
+}
+
+.topIcon {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #444;
+  cursor: pointer;
+}
+
+.topImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.topList {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.topListItem {
+  margin-right: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.topSearchIcon {
+  font-size: 18px;
+  color: #666;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+/* Media query for mobile devices (below 937px) */
+@media only screen and (max-width: 937px) {
+  .topLeft {
+    display: none;
+  }
+
+  .topCenter {
+    flex: 12; /* Allow the center section to take up more space */
+    text-align: center;
+  }
+
+  .topList {
+    justify-content: center;
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .topListItem {
+    margin: 5px 0; /* Reduce spacing between menu items */
+    font-size: 16px; /* Reduce font size for smaller screens */
+  }
+
+  .topRight {
+    flex: 3;
+    justify-content: flex-end;
+  }
+
+  .topImg {
+    width: 30px;
+    height: 30px; /* Make the profile image smaller on mobile */
+  }
+
+  /* Add hamburger menu icon on smaller screens (optional) */
+  .hamburger {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    color: #444;
+    margin-left: auto;
+  }
+  *{
+    margin-top:20px;
+  }
+  
+}
+
+/* Media query for even smaller devices (phones in portrait mode) */
+@media only screen and (max-width: 576px) {
+  .topListItem {
+    font-size: 14px; /* Further reduce font size on very small devices */
+  }
+
+  .topImg {
+    width: 25px;
+    height: 25px; /* Further reduce the profile image size */
+  }
+}
