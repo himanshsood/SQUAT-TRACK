@@ -42,8 +42,8 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 
-app.use("/api/contact",contactRoute)
-app.use("/api/download-post",downloadPost)
+// app.use("/api/contact",contactRoute)
+// app.use("/api/download-post",downloadPost)
 
 app.listen("5000", () => {
   console.log("Backend is running.");
