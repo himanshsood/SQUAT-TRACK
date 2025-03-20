@@ -6,6 +6,7 @@ import Header from "../../components/header/Header"; // Assumed Header renders t
 import Posts from "../../components/posts/Posts";
 import "./home.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Home() {
@@ -16,29 +17,37 @@ export default function Home() {
   const { search } = useLocation();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const fetchPosts = async () => {
-      setLoading(true);
-      setError(null); // Reset error state before fetching
-      try {
-        const res = await axios.get("/posts" + search);
-        setPosts(res.data);
-      } catch (err) {
-        setError("Failed to fetch posts. Please try again later.");
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchPosts();
-  }, [search]);
-
+  
  
   return (
-    <div className="home">
-      {/* <h1 className="homeTitle">My Blog</h1> */}
-      <Header />
-     
-      
-    </div>
+    
+
+      // <div className="home">
+      //   <div className="headerTitles">
+          
+      //     <span className="headerTitleLg">FITASSIST</span>
+          
+          
+      //     <Link className="linkk" to="/counter">
+      //       COUNTER
+      //     </Link> 
+          
+      //   </div>
+      // </div>
+
+      <div className="home">
+        <div className="sec1">
+          <div className="headerTitleLg">FITASSIST</div>
+          <div className="counterbutton">
+            <Link className="link" to="/counter">
+              COUNTER
+            </Link> 
+          </div>
+        </div>
+      </div>
+
   );
+
+  
+
 }

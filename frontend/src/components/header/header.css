@@ -2,6 +2,9 @@
   margin-top: 60px;
 }
 
+body{
+  margin:20px;
+}
 .headerTitles {
   display: flex;
   flex-direction: left;
